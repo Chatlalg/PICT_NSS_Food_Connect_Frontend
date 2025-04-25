@@ -1,0 +1,76 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+:root {
+  --background: 1 0 0;
+  --foreground: 0.2 0.01 30;
+  --muted: 0.95 0.01 90;
+  --muted-foreground: 0.45 0.01 35;
+  --popover: 1 0 0;
+  --popover-foreground: 0.2 0.01 30;
+  --card: 1 0 0;
+  --card-foreground: 0.2 0.01 30;
+  --border: 0.9 0.01 30;
+  --input: 0.9 0.01 30;
+  --primary: 0.6 0.2 142;
+  --primary-foreground: 1 0 0;
+  --secondary: 0.95 0.01 90;
+  --secondary-foreground: 0.2 0.01 35;
+  --accent: 0.95 0.01 90;
+  --accent-foreground: 0.2 0.01 35;
+  --destructive: 0.65 0.2 0;
+  --destructive-foreground: 0.97 0.01 90;
+  --ring: 0.2 0.01 30;
+  --radius: 0.5rem;
+
+  /* Custom colors */
+  --mint-green: 0.6 0.2 142;
+  --pink: 0.75 0.22 336;
+  --yellow: 0.83 0.24 80;
+}
+
+.dark {
+  --background: 0.15 0.01 240;
+  --foreground: 0.98 0 0;
+  --muted: 0.2 0.01 240;
+  --muted-foreground: 0.65 0.01 240;
+  --popover: 0.15 0.01 240;
+  --popover-foreground: 0.98 0 0;
+  --card: 0.15 0.01 240;
+  --card-foreground: 0.98 0 0;
+  --border: 0.2 0.01 240;
+  --input: 0.2 0.01 240;
+  --primary: 0.6 0.2 142;
+  --primary-foreground: 0.98 0 0;
+  --secondary: 0.2 0.01 240;
+  --secondary-foreground: 0.98 0 0;
+  --accent: 0.2 0.01 240;
+  --accent-foreground: 0.98 0 0;
+  --destructive: 0.3 0.15 0;
+  --destructive-foreground: 0.98 0 0;
+  --ring: 0.8 0.01 240;
+}
+
+@layer base {
+  * {
+    border-color: oklch(var(--border));
+  }
+  
+
+  body {
+    @apply font-sans antialiased;
+    background-color: oklch(var(--background));
+    color: oklch(var(--foreground));
+  }
+}
+
+.bg-mint {
+  @apply bg-green-200 text-green-700;
+}
+
+.bg-pink {
+  @apply bg-pink-100 text-pink-800;
+}
+
+.bg-yellow {
+  @apply bg-yellow-200 text-yellow-700;
+}
